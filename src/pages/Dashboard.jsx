@@ -37,12 +37,12 @@ export default function Dashboard() {
             {/* Main Content Area */}
             <main className="ml-0 lg:ml-[260px] mt-16 p-4 lg:p-8 min-h-screen bg-background">
                 {/* Hero Section */}
-                <div className="mb-10 flex justify-between items-end">
+                <div className="mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                     <div>
                         <h2 className="font-display-lg text-display-lg text-primary">Welcome!</h2>
                         <p className="font-headline-md text-headline-md text-on-primary-fixed-variant mt-1">Prakhar Sharma</p>
                     </div>
-                    <div className="bg-secondary-container/10 border border-secondary/20 px-4 py-2 rounded-lg">
+                    <div className="bg-secondary-container/10 border border-secondary/20 px-4 py-2 rounded-lg self-start sm:self-auto">
                         <span className="text-secondary font-bold">Today's Orders: 0</span>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function Dashboard() {
                 {/* Bento Grid: Quick Actions & Plans */}
                 <div className="grid grid-cols-12 gap-gutter mb-gutter">
                     {/* Quick Action Grid */}
-                    <div className="col-span-12 lg:col-span-8 grid grid-cols-6 gap-4">
+                    <div className="col-span-12 lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                         <div className="col-span-1 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant hover:shadow-lg transition-all text-center cursor-pointer group">
                             <div className="w-10 h-10 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:bg-secondary group-hover:text-white transition-all">
                                 <span className="material-symbols-outlined">calculate</span>
@@ -89,9 +89,9 @@ export default function Dashboard() {
                         </div>
 
                         {/* Pickup Banner */}
-                        <div className="col-span-6 relative h-48 bg-primary-container rounded-2xl overflow-hidden flex items-center px-10">
+                        <div className="col-span-2 sm:col-span-3 md:col-span-6 relative h-auto min-h-[12rem] py-8 bg-primary-container rounded-2xl overflow-hidden flex flex-col md:flex-row items-center px-6 md:px-10 gap-6">
                             <div className="absolute inset-0 opacity-20"></div>
-                            <div className="relative z-10">
+                            <div className="relative z-10 w-full md:max-w-md">
                                 <h3 className="text-white font-headline-lg text-headline-lg">Streamline Your Shipping</h3>
                                 <p className="text-on-primary-container text-body-lg mb-6">Schedule your pickups with a single click and track in real-time.</p>
                                 <button className="bg-tertiary-fixed text-on-tertiary-fixed px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-transform">
@@ -99,7 +99,7 @@ export default function Dashboard() {
                                     Add Pickup Request
                                 </button>
                             </div>
-                            <div className="absolute right-10 bottom-0 w-64 h-40">
+                            <div className="hidden md:block absolute right-10 bottom-0 w-64 h-40">
                                 <img className="w-full h-full object-contain" data-alt="A stylized 3D isometric illustration of a modern delivery truck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1kqIX1tnD6J1jmgVjsgBnUXoNEBPOIFE3dqAFFjOrZZZIHPqHWQugdP2uEfC-Wv21AxkAxp4KeerC5o4cbWLzVyebv4Rm4XuitUx-zYU-BAyMx2sXD_RwuGrfNSLzBR5ygD_Lzr4d8KJZwSwDg3KBN8M9HxSQzMO8NUUoU9DYPT_Nat9rZChd1sdWQNp1bvJwi8ERXjfe9eBleAFJDwRqE3zes4SZO5TEhyf7wRqQ03tNyhxmCDCUe1BkFYr9-jvfDS4aUw31ASMP" alt="" />
                             </div>
                         </div>
@@ -366,12 +366,12 @@ export default function Dashboard() {
                 <div className="grid grid-cols-12 gap-gutter">
                     {/* Performance Report Chart */}
                     <div className="col-span-12 lg:col-span-8 bg-white p-6 rounded-2xl border border-outline-variant">
-                        <div className="flex justify-between items-center mb-8">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                             <div>
                                 <h4 className="font-headline-md text-headline-md">Performance Analytics</h4>
                                 <p className="text-xs text-on-surface-variant">Order volume trend across B2B &amp; B2C channels</p>
                             </div>
-                            <div className="flex gap-4">
+                            <div className="flex flex-wrap gap-4">
                                 <div className="flex items-center gap-2">
                                     <span className="w-3 h-3 rounded-full bg-secondary"></span>
                                     <span className="text-xs font-medium">B2B Shipments</span>

@@ -14,14 +14,15 @@ export default function MyOrders() {
         {/* BEGIN: MainContent */}
         <main className="flex-1 overflow-y-auto p-4 lg:p-8 custom-scrollbar mt-16 lg:mt-0">
           {/* BEGIN: StepIndicator */}
-          <div className="flex items-center space-x-4 mb-8 text-sm">
-            <span className="text-blue-600 font-semibold">Create New Order</span>
-            <span className="text-slate-400">·</span>
-            <span className="text-slate-400">Choose Shipping Partners</span>
-            <span className="text-slate-400">·</span>
-            <span className="text-slate-400">Create Order Details</span>
-            <div className="flex-1"></div>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold text-sm transition-colors shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 text-sm">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-blue-600 font-semibold">Create New Order</span>
+              <span className="text-slate-400">·</span>
+              <span className="text-slate-400">Choose Shipping Partners</span>
+              <span className="text-slate-400">·</span>
+              <span className="text-slate-400">Create Order Details</span>
+            </div>
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold text-sm transition-colors shadow-sm self-start sm:self-auto">
               ✈️ Create International Order
             </button>
           </div>
@@ -100,8 +101,8 @@ export default function MyOrders() {
                 </section>
                 {/* END: ModeInvoiceDetails */}
                 {/* BEGIN: AdditionalSettings */}
-                <section className="bg-indigo-50/50 rounded-2xl p-4 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-4" data-purpose="additional-settings">
-                    <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-12 w-full">
+                <section className="bg-indigo-50/50 rounded-2xl p-4 lg:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4" data-purpose="additional-settings">
+                  <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-12 w-full">
                     <div>
                       <p className="text-sm font-semibold text-indigo-900 mb-3">Insurance ?</p>
                       <div className="flex items-center space-x-6">
@@ -118,20 +119,22 @@ export default function MyOrders() {
                     <div className="hidden md:block h-10 w-px bg-indigo-200"></div>
                     <div>
                       <p className="text-sm font-semibold text-indigo-900 mb-3">Appointment Base Delivery</p>
-                      <button className="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none bg-slate-300" type="button">
-                        <span className="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
-                      </button>
-                      <span className="ml-3 text-sm text-indigo-700">No</span>
+                      <div className="flex items-center">
+                        <button className="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none bg-slate-300" type="button">
+                          <span className="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
+                        </button>
+                        <span className="ml-3 text-sm text-indigo-700">No</span>
+                      </div>
                     </div>
                   </div>
                 </section>
                 {/* END: AdditionalSettings */}
                 {/* BEGIN: FormActions */}
-                <div className="flex gap-4 pt-6">
-                  <button className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-200 transition-all">
+                <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                  <button className="w-full sm:flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-200 transition-all">
                     Search Courier Partner
                   </button>
-                  <button className="w-1/3 bg-white border border-red-200 text-red-600 font-bold py-4 rounded-xl hover:bg-red-50 transition-all">
+                  <button className="w-full sm:w-1/3 bg-white border border-red-200 text-red-600 font-bold py-4 rounded-xl hover:bg-red-50 transition-all">
                     Reset
                   </button>
                 </div>
@@ -182,15 +185,15 @@ export default function MyOrders() {
         </main>
         {/* END: MainContent */}
         {/* BEGIN: Footer */}
-        <footer className="h-10 bg-white border-t border-slate-100 flex items-center justify-between px-8 text-[11px] text-slate-400">
-          <div className="flex space-x-4">
+        <footer className="py-4 bg-white border-t border-slate-100 flex flex-col md:flex-row items-center justify-between px-4 lg:px-8 gap-4 text-[11px] text-slate-400">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             <a className="hover:text-shipdesk-blue" href="#">Privacy Policy</a>
             <span className="text-slate-200">|</span>
             <a className="hover:text-shipdesk-blue" href="#">Refund Policy</a>
             <span className="text-slate-200">|</span>
             <a className="hover:text-shipdesk-blue" href="#">Terms of Use</a>
           </div>
-          <div>
+          <div className="text-center md:text-right">
             Copyright © 2026 Shipdesk Pvt. Ltd. | Made with <span className="text-red-500">❤️</span> in India
           </div>
         </footer>

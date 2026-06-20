@@ -51,7 +51,7 @@ export default function NdrExceptions() {
                     </div>
 
                     {/* Dashboard Metric Quick-View */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <div className="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow">
                             <p className="text-slate-500 font-bold text-xs uppercase tracking-wider mb-2">Total Exceptions</p>
                             <div className="flex items-end justify-between">
@@ -147,11 +147,11 @@ export default function NdrExceptions() {
                                                 <p className="text-sm text-slate-500 mt-2 max-w-sm mx-auto">
                                                     There are currently no active non-delivery reports for your account. You're all caught up!
                                                 </p>
-                                                <div className="mt-8 flex items-center gap-4">
-                                                    <button className="px-6 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold shadow-md shadow-blue-600/20 hover:bg-blue-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                                                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+                                                    <button className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold shadow-md shadow-blue-600/20 hover:bg-blue-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
                                                         Check Past Records
                                                     </button>
-                                                    <button className="px-6 py-2.5 border border-slate-300 bg-white text-slate-700 rounded-xl text-sm font-bold hover:bg-slate-50 transition-all shadow-sm">
+                                                    <button className="w-full sm:w-auto px-6 py-2.5 border border-slate-300 bg-white text-slate-700 rounded-xl text-sm font-bold hover:bg-slate-50 transition-all shadow-sm">
                                                         Request Support
                                                     </button>
                                                 </div>
@@ -163,7 +163,7 @@ export default function NdrExceptions() {
                         </div>
 
                         {/* Footer / Pagination */}
-                        <div className="px-6 py-5 border-t border-slate-200 flex items-center justify-between bg-slate-50/50">
+                        <div className="px-6 py-5 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/50">
                             <p className="text-sm text-slate-500">Showing <span className="font-bold text-slate-700">0</span> to <span className="font-bold text-slate-700">0</span> of 0 entries</p>
                             <div className="flex items-center gap-2">
                                 <button className="p-2 bg-white border border-slate-200 rounded-lg text-slate-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-50 transition-all shadow-sm" disabled>
@@ -180,13 +180,13 @@ export default function NdrExceptions() {
                     </div>
 
                     {/* Footer Links */}
-                    <footer className="mt-12 pb-8 border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div className="flex items-center gap-6 text-xs text-slate-500 font-medium">
+                    <footer className="mt-12 pb-8 border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                        <div className="flex flex-wrap justify-center gap-6 text-xs text-slate-500 font-medium">
                             <a className="hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
                             <a className="hover:text-blue-600 transition-colors" href="#">Refund Policy</a>
                             <a className="hover:text-blue-600 transition-colors" href="#">Terms of Use</a>
                         </div>
-                        <div className="flex items-center gap-6 text-xs text-slate-500 font-medium">
+                        <div className="flex flex-col sm:flex-row items-center gap-6 text-xs text-slate-500 font-medium">
                             <p>Copyright &copy; 2026 Truxcargo Pvt Ltd.</p>
                             <div className="flex items-center gap-1.5">
                                 <span>Made in 🇮🇳 with</span>

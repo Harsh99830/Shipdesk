@@ -50,7 +50,7 @@ export default function MopRequest() {
                             <h2 className="font-headline-lg text-headline-lg text-slate-800 tracking-tight">Mode Of Payment Request</h2>
                             <p className="text-slate-500 font-body-md mt-1">Manage and track your MOP status updates and requests.</p>
                         </div>
-                        <button className="flex items-center gap-2 bg-blue-600 px-6 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all">
+                        <button className="flex items-center justify-center gap-2 bg-blue-600 px-6 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all self-start md:self-auto w-full md:w-auto">
                             <span className="material-symbols-outlined">add</span>
                             <span>New MOP Request</span>
                         </button>
@@ -73,7 +73,7 @@ export default function MopRequest() {
                                     />
                                 </div>
                             </div>
-                            <button className="bg-slate-100 border border-slate-200 text-slate-700 px-8 py-3 rounded-xl font-semibold hover:bg-slate-200 transition-colors flex items-center gap-2 shrink-0">
+                            <button className="w-full md:w-auto bg-slate-100 border border-slate-200 text-slate-700 px-8 py-3 rounded-xl font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 shrink-0">
                                 <span className="material-symbols-outlined text-[18px]">filter_list</span>
                                 <span>Apply Filters</span>
                             </button>
@@ -164,7 +164,7 @@ export default function MopRequest() {
                         </div>
                         
                         {/* Table Pagination */}
-                        <div className="px-6 py-4 border-t border-slate-200 flex items-center justify-between bg-slate-50">
+                        <div className="px-6 py-4 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50">
                             <p className="text-sm text-slate-500">Showing 1 to 3 of 8 entries</p>
                             <div className="flex gap-2">
                                 <button className="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100 transition-all disabled:opacity-50" disabled>
@@ -180,15 +180,15 @@ export default function MopRequest() {
                     </div>
 
                     {/* Footer Meta */}
-                    <footer className="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4 mt-8 pb-8">
-                        <div className="flex gap-6">
+                    <footer className="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4 mt-8 pb-8 text-center md:text-left">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                             <a className="hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
                             <a className="hover:text-blue-600 transition-colors" href="#">Refund Policy</a>
                             <a className="hover:text-blue-600 transition-colors" href="#">Terms of Use</a>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-col sm:flex-row items-center gap-2">
                             <span>Copyright &copy; 2024 Truxcargo Pvt. Ltd.</span>
-                            <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span className="hidden sm:inline w-1 h-1 bg-slate-300 rounded-full"></span>
                             <span>Made In 🇮🇳 with <span className="material-symbols-outlined text-red-500 text-[12px] inline-block align-middle" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span></span>
                         </div>
                     </footer>

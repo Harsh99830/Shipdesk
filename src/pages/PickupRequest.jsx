@@ -22,13 +22,13 @@ export default function PickupRequest() {
 
             {/* Main Content Area */}
             <main className="ml-0 lg:ml-[260px] mt-16 p-4 lg:p-8 max-w-7xl mx-auto min-h-screen">
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                     <div>
                         <h2 className="font-headline-lg text-headline-lg text-on-surface">Pickup Request</h2>
-                        <p className="text-on-surface-variant">Schedule and manage your courier pickups across warehouses.</p>
+                        <p className="text-on-surface-variant text-sm mt-1">Schedule and manage your courier pickups across warehouses.</p>
                     </div>
                     <button 
-                        className="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-semibold flex items-center gap-2 hover:bg-blue-700 transition-all shadow-md hover:shadow-lg" 
+                        className="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-md hover:shadow-lg self-start sm:self-auto" 
                         onClick={() => setIsModalOpen(true)}
                     >
                         <span className="material-symbols-outlined">add</span>
@@ -37,7 +37,7 @@ export default function PickupRequest() {
                 </div>
 
                 {/* Dashboard Stats Overview (Bento Style) */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     <div className="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow">
                         <div className="flex items-center justify-between mb-4">
                             <span className="p-2 bg-blue-50 text-blue-600 rounded-xl"><span className="material-symbols-outlined">pending_actions</span></span>
@@ -76,13 +76,13 @@ export default function PickupRequest() {
 
                 {/* Recent Requests Table */}
                 <section className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                    <div className="px-6 py-5 border-b border-slate-200 flex items-center justify-between bg-slate-50/50">
+                    <div className="px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/50">
                         <h3 className="font-bold text-lg text-slate-800">Recent Pickup Requests</h3>
-                        <div className="flex gap-3">
-                            <button className="px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors flex items-center gap-2 shadow-sm">
+                        <div className="flex gap-3 w-full sm:w-auto">
+                            <button className="flex-1 sm:flex-initial px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors flex items-center justify-center gap-2 shadow-sm">
                                 <span className="material-symbols-outlined text-[18px]">filter_list</span> Filter
                             </button>
-                            <button className="px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors flex items-center gap-2 shadow-sm">
+                            <button className="flex-1 sm:flex-initial px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors flex items-center justify-center gap-2 shadow-sm">
                                 <span className="material-symbols-outlined text-[18px]">download</span> Export
                             </button>
                         </div>
@@ -190,7 +190,7 @@ export default function PickupRequest() {
                             </tbody>
                         </table>
                     </div>
-                    <div className="p-gutter flex items-center justify-between border-t border-outline-variant">
+                    <div className="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-outline-variant">
                         <span className="text-body-md text-on-surface-variant">Showing 1 to 10 of 24 requests</span>
                         <div className="flex gap-2">
                             <button className="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-all"><span className="material-symbols-outlined text-sm">chevron_left</span></button>
@@ -207,22 +207,22 @@ export default function PickupRequest() {
             {isModalOpen && (
                 <div className="fixed inset-0 z-[60] flex items-center justify-center" id="pickup-modal">
                     <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setIsModalOpen(false)}></div>
-                    <div className="relative bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+                    <div className="relative bg-white w-[calc(100%-2rem)] max-w-2xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in duration-200">
                         {/* Modal Header */}
-                        <div className="px-8 py-6 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                        <div className="px-6 sm:px-8 py-5 sm:py-6 bg-slate-50 border-b border-slate-200 flex items-center justify-between shrink-0">
                             <div>
                                 <h3 className="text-xl font-bold text-slate-800">New Pickup Request</h3>
                                 <p className="text-slate-500 text-sm mt-1">Fill in the details to schedule your shipment pickup.</p>
                             </div>
                             <button 
-                                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all" 
+                                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 transition-all" 
                                 onClick={() => setIsModalOpen(false)}
                             >
                                 <span className="material-symbols-outlined">close</span>
                             </button>
                         </div>
                         {/* Modal Content */}
-                        <div className="p-8 space-y-6">
+                        <div className="p-6 sm:p-8 space-y-6 overflow-y-auto flex-1 custom-scrollbar">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-widest block">Shipping Partner</label>
@@ -276,7 +276,7 @@ export default function PickupRequest() {
                             </div>
                         </div>
                         {/* Modal Actions */}
-                        <div className="px-8 py-5 border-t border-slate-200 bg-slate-50 flex items-center justify-end gap-3">
+                        <div className="px-6 sm:px-8 py-4 sm:py-5 border-t border-slate-200 bg-slate-50 flex items-center justify-end gap-3 shrink-0">
                             <button 
                                 className="px-6 py-2.5 rounded-xl font-semibold text-slate-600 hover:bg-slate-200/50 transition-all" 
                                 onClick={() => setIsModalOpen(false)}

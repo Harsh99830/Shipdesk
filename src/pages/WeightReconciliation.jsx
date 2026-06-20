@@ -55,7 +55,7 @@ export default function WeightReconciliation() {
                             <h2 className="font-headline-lg text-3xl font-bold text-slate-900 tracking-tight">Weight Reconciliation</h2>
                             <p className="text-sm font-medium text-slate-500 mt-1">Review and dispute discrepancies in weight and dimensions.</p>
                         </div>
-                        <button className="flex items-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-800 transition-all active:scale-95 shadow-md">
+                        <button className="flex items-center justify-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-800 transition-all active:scale-95 shadow-md self-start md:self-auto w-full md:w-auto">
                             <span className="material-symbols-outlined text-[20px]">download</span>
                             Report
                         </button>
@@ -151,24 +151,24 @@ export default function WeightReconciliation() {
                     </div>
 
                     {/* Notice Banner */}
-                    <div className="bg-blue-50 p-4 rounded-2xl border-l-4 border-blue-600 flex flex-col md:flex-row items-center justify-between gap-4 mb-6 shadow-sm">
+                    <div className="bg-blue-50 p-4 rounded-2xl border-l-4 border-blue-600 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 shadow-sm">
                         <div className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-blue-600">info</span>
                             <p className="text-sm font-medium text-blue-900">
                                 Weight discrepancies are auto-accepted after <span className="font-bold text-blue-700">7 days</span> of generation if no dispute is raised.
                             </p>
                         </div>
-                        <button className="text-xs font-bold bg-white text-blue-700 border border-blue-200 px-4 py-2 rounded-xl hover:bg-blue-100 transition-colors shadow-sm whitespace-nowrap">
+                        <button className="text-xs font-bold bg-white text-blue-700 border border-blue-200 px-4 py-2 rounded-xl hover:bg-blue-100 transition-colors shadow-sm whitespace-nowrap self-start md:self-auto">
                             SOP Of Weight Reconciliation
                         </button>
                     </div>
 
                     {/* Status Tabs & Table Section */}
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-8">
-                        <div className="flex items-center px-6 py-4 border-b border-slate-200 gap-8 bg-slate-50/50">
+                        <div className="flex items-center px-6 py-4 border-b border-slate-200 gap-8 bg-slate-50/50 overflow-x-auto whitespace-nowrap custom-scrollbar">
                             <button 
                                 onClick={() => setActiveTab('mismatched')}
-                                className={`relative py-2 px-1 font-bold text-sm flex items-center gap-2 group transition-colors ${activeTab === 'mismatched' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                                className={`relative py-2 px-1 font-bold text-sm flex items-center gap-2 group transition-colors shrink-0 ${activeTab === 'mismatched' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                             >
                                 Mismatched
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${activeTab === 'mismatched' ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'}`}>12</span>
@@ -176,7 +176,7 @@ export default function WeightReconciliation() {
                             </button>
                             <button 
                                 onClick={() => setActiveTab('raised')}
-                                className={`relative py-2 px-1 font-bold text-sm flex items-center gap-2 group transition-colors ${activeTab === 'raised' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                                className={`relative py-2 px-1 font-bold text-sm flex items-center gap-2 group transition-colors shrink-0 ${activeTab === 'raised' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                             >
                                 Disputes Raised
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${activeTab === 'raised' ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'}`}>04</span>
@@ -184,7 +184,7 @@ export default function WeightReconciliation() {
                             </button>
                             <button 
                                 onClick={() => setActiveTab('settled')}
-                                className={`relative py-2 px-1 font-bold text-sm flex items-center gap-2 group transition-colors ${activeTab === 'settled' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                                className={`relative py-2 px-1 font-bold text-sm flex items-center gap-2 group transition-colors shrink-0 ${activeTab === 'settled' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                             >
                                 Disputes Settled
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${activeTab === 'settled' ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'}`}>28</span>
@@ -257,7 +257,7 @@ export default function WeightReconciliation() {
                             </table>
                         </div>
                         {/* Table Footer */}
-                        <div className="bg-slate-50 p-4 flex items-center justify-between border-t border-slate-200">
+                        <div className="bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-slate-200">
                             <p className="text-sm text-slate-500">Showing 2 of 12 records</p>
                             <div className="flex gap-2">
                                 <button className="px-3 py-1.5 border border-slate-200 bg-white rounded-lg text-slate-400 disabled:opacity-50 shadow-sm" disabled>

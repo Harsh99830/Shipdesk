@@ -63,7 +63,7 @@ export default function DeliveryAppointment() {
                             <h2 className="font-headline-lg text-3xl font-bold text-slate-900 tracking-tight">Delivery Appointment</h2>
                             <p className="font-body-md text-slate-500">Schedule and manage warehouse delivery slots for your shipments efficiently.</p>
                         </div>
-                        <button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-body-md font-semibold flex items-center gap-2 hover:bg-blue-700 hover:shadow-lg transition-all shadow-md active:scale-95">
+                        <button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-body-md font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 hover:shadow-lg transition-all shadow-md active:scale-95 self-start md:self-auto w-full md:w-auto">
                             <span className="material-symbols-outlined text-lg">add</span>
                             <span>Add Appointment</span>
                         </button>
@@ -177,7 +177,7 @@ export default function DeliveryAppointment() {
                         </div>
                         
                         {/* Pagination */}
-                        <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
+                        <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                             <p className="text-sm text-slate-500">Showing 1 to 3 of 42 entries</p>
                             <div className="flex items-center gap-2">
                                 <button className="p-2 bg-white border border-slate-200 rounded-lg text-slate-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-50 transition-all shadow-sm" disabled>
