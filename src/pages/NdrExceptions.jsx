@@ -8,11 +8,11 @@ export default function NdrExceptions() {
     return (
         <div className="bg-slate-50 text-slate-800 min-h-screen font-body-md">
             <Sidebar />
-            <Topbar className="fixed top-0 left-[260px] right-0 z-40" />
+            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
             {/* Main Content Canvas */}
-            <main className="ml-[260px] mt-16 min-h-screen">
-                <div className="p-8 max-w-7xl mx-auto">
+            <main className="ml-0 lg:ml-[260px] mt-16 min-h-screen">
+                <div className="p-4 lg:p-8 max-w-7xl mx-auto">
                     
                     {/* Page Header */}
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">

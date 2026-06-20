@@ -39,11 +39,11 @@ export default function MopRequest() {
     return (
         <div className="bg-slate-50 font-body-md text-on-surface min-h-screen">
             <Sidebar />
-            <Topbar className="fixed top-0 left-[260px] right-0" />
+            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
             {/* Main Content Canvas */}
-            <main className="ml-[260px] mt-16 min-h-screen">
-                <div className="max-w-7xl mx-auto p-8">
+            <main className="ml-0 lg:ml-[260px] mt-16 min-h-screen">
+                <div className="max-w-7xl mx-auto p-4 lg:p-8">
                     {/* Page Header Area */}
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                         <div>

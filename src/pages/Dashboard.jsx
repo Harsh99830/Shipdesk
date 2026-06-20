@@ -31,11 +31,11 @@ export default function Dashboard() {
             <Sidebar />
 
             {/* Top App Bar */}
-            <Topbar className="fixed top-0 left-[260px] right-0" />
+            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0" />
 
 
             {/* Main Content Area */}
-            <main className="ml-[260px] mt-16 p-8 min-h-screen bg-background">
+            <main className="ml-0 lg:ml-[260px] mt-16 p-4 lg:p-8 min-h-screen bg-background">
                 {/* Hero Section */}
                 <div className="mb-10 flex justify-between items-end">
                     <div>

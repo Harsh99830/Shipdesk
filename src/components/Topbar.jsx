@@ -3,11 +3,19 @@ import React from 'react';
 export default function Topbar({ className }) {
   return (
     <header className={`h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 z-40 ${className || ''}`} data-purpose="top-bar">
-      <div className="relative w-96">
-        <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
-        </span>
-        <input className="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-full bg-slate-50 text-sm focus:outline-none focus:ring-1 focus:ring-shipdesk-blue" placeholder="Search BY LRN/AWB no" type="text" />
+      <div className="flex items-center gap-4 flex-1">
+        <button 
+          className="lg:hidden p-2 -ml-2 text-slate-500 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors"
+          onClick={() => window.dispatchEvent(new Event('toggle-mobile-sidebar'))}
+        >
+          <span className="material-symbols-outlined">menu</span>
+        </button>
+        <div className="relative w-full max-w-md hidden sm:block">
+          <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
+          </span>
+          <input className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all" placeholder="Search BY LRN/AWB no" type="text" />
+        </div>
       </div>
       <div className="flex items-center space-x-6">
         <div className="flex items-center bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-100">

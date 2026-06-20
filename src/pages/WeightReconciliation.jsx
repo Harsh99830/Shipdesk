@@ -43,11 +43,11 @@ export default function WeightReconciliation() {
     return (
         <div className="bg-slate-50 text-slate-800 min-h-screen font-body-md">
             <Sidebar />
-            <Topbar className="fixed top-0 left-[260px] right-0 z-40" />
+            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
             {/* Main Content Shell */}
-            <main className="ml-[260px] mt-16 min-h-screen">
-                <div className="p-8 space-y-6 max-w-7xl mx-auto">
+            <main className="ml-0 lg:ml-[260px] mt-16 min-h-screen">
+                <div className="p-4 lg:p-8 space-y-6 max-w-7xl mx-auto">
                     
                     {/* Header Section */}
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">

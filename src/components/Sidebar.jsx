@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
     const location = useLocation();
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const handleToggle = () => setIsOpen(prev => !prev);
+        const handleClose = () => setIsOpen(false);
+        
+        window.addEventListener('toggle-mobile-sidebar', handleToggle);
+        window.addEventListener('close-mobile-sidebar', handleClose);
+        
+        // Close sidebar on route change on mobile
+        handleClose();
+
+        return () => {
+            window.removeEventListener('toggle-mobile-sidebar', handleToggle);
+            window.removeEventListener('close-mobile-sidebar', handleClose);
+        };
+    }, [location.pathname]);
 
     const menuItems = [
         { path: '/dashboard', icon: 'dashboard', label: 'Dashboard' },
@@ -23,7 +40,16 @@ export default function Sidebar() {
     ];
 
     return (
-        <aside className="fixed left-0 top-0 h-screen w-[260px] bg-primary-container text-primary-fixed-dim z-50 flex flex-col py-6 px-4 overflow-y-auto rounded-r-3xl shadow-2xl border-r border-white/5 transition-all duration-500 ease-in-out">
+        <>
+            {/* Mobile Backdrop */}
+            {isOpen && (
+                <div 
+                    className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 lg:hidden"
+                    onClick={() => setIsOpen(false)}
+                />
+            )}
+            
+            <aside className={`fixed left-0 top-0 h-screen w-[260px] bg-primary-container text-primary-fixed-dim z-50 flex flex-col py-6 px-4 overflow-y-auto rounded-r-3xl shadow-2xl border-r border-white/5 transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
             <div className="flex items-center gap-3 px-2 mb-10">
                 <div className="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center">
                     <span className="material-symbols-outlined text-on-secondary-container">local_shipping</span>
@@ -59,5 +85,6 @@ export default function Sidebar() {
                 </button>
             </div>
         </aside>
+        </>
     );
 }

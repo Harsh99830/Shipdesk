@@ -8,11 +8,11 @@ export default function MyOrders() {
     <div className="h-screen overflow-hidden bg-shipdesk-surface font-sans">
       <Sidebar />
 
-      <div className="flex flex-col min-w-0 ml-[260px] h-full">
-        <Topbar className="flex-shrink-0" />
+      <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] h-full">
+        <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
         {/* BEGIN: MainContent */}
-        <main className="flex-1 overflow-y-auto p-8 custom-scrollbar">
+        <main className="flex-1 overflow-y-auto p-4 lg:p-8 custom-scrollbar mt-16 lg:mt-0">
           {/* BEGIN: StepIndicator */}
           <div className="flex items-center space-x-4 mb-8 text-sm">
             <span className="text-blue-600 font-semibold">Create New Order</span>
@@ -26,7 +26,7 @@ export default function MyOrders() {
             </button>
           </div>
           {/* END: StepIndicator */}
-          <div className="flex gap-8">
+          <div className="flex flex-col xl:flex-row gap-8">
             {/* BEGIN: FormContainer */}
             <div className="flex-1 bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden" data-purpose="order-form-container">
               <div className="p-8 space-y-10">
@@ -98,8 +98,8 @@ export default function MyOrders() {
                 </section>
                 {/* END: ModeInvoiceDetails */}
                 {/* BEGIN: AdditionalSettings */}
-                <section className="bg-indigo-50/50 rounded-2xl p-8 flex items-center justify-between" data-purpose="additional-settings">
-                  <div className="flex items-center space-x-12">
+                <section className="bg-indigo-50/50 rounded-2xl p-4 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-4" data-purpose="additional-settings">
+                    <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-12 w-full">
                     <div>
                       <p className="text-sm font-semibold text-indigo-900 mb-3">Insurance ?</p>
                       <div className="flex items-center space-x-6">
@@ -113,7 +113,7 @@ export default function MyOrders() {
                         </label>
                       </div>
                     </div>
-                    <div className="h-10 w-px bg-indigo-200"></div>
+                    <div className="hidden md:block h-10 w-px bg-indigo-200"></div>
                     <div>
                       <p className="text-sm font-semibold text-indigo-900 mb-3">Appointment Base Delivery</p>
                       <button className="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none bg-slate-300" type="button">
@@ -138,7 +138,7 @@ export default function MyOrders() {
             </div>
             {/* END: FormContainer */}
             {/* BEGIN: SidebarIllustration */}
-            <aside className="w-80 flex flex-col gap-6" data-purpose="promo-sidebar">
+            <aside className="w-full xl:w-80 flex flex-col gap-6" data-purpose="promo-sidebar">
               <div className="bg-gradient-to-br from-indigo-600 to-blue-500 rounded-3xl p-8 text-white relative overflow-hidden flex flex-col justify-between min-h-[600px]">
                 <div className="relative z-10 mb-8">
                   <h3 className="text-2xl font-bold mb-6">Creating New Order Process</h3>

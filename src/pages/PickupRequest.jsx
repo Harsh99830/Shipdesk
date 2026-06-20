@@ -18,10 +18,10 @@ export default function PickupRequest() {
     return (
         <div className="bg-background font-body-md text-on-surface min-h-screen">
             <Sidebar />
-            <Topbar className="fixed top-0 left-[260px] right-0" />
+            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
             {/* Main Content Area */}
-            <main className="ml-[260px] mt-16 p-8 max-w-7xl mx-auto min-h-screen">
+            <main className="ml-0 lg:ml-[260px] mt-16 p-4 lg:p-8 max-w-7xl mx-auto min-h-screen">
                 <div className="flex items-center justify-between mb-8">
                     <div>
                         <h2 className="font-headline-lg text-headline-lg text-on-surface">Pickup Request</h2>
