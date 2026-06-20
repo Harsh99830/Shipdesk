@@ -5,6 +5,8 @@ import MyOrders from './pages/MyOrders';
 import PickupRequest from './pages/PickupRequest';
 import MopRequest from './pages/MopRequest';
 import NdrExceptions from './pages/NdrExceptions';
+import DeliveryAppointment from './pages/DeliveryAppointment';
+import WeightReconciliation from './pages/WeightReconciliation';
 import './App.css';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/pickup-request" element={<PickupRequest />} />
         <Route path="/mop-request" element={<MopRequest />} />
         <Route path="/ndr" element={<NdrExceptions />} />
+        <Route path="/delivery-appointment" element={<DeliveryAppointment />} />
+        <Route path="/weight-reconciliation" element={<WeightReconciliation />} />
       </Routes>
     </BrowserRouter>
   );
