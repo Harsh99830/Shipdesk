@@ -33,7 +33,7 @@ export default function MyOrders() {
                 {/* BEGIN: PickupDestinationDetails */}
                 <section data-purpose="pickup-destination-section">
                   <h2 className="text-lg font-bold text-slate-800 mb-6">Pickup &amp; Destination Details</h2>
-                  <div className="grid grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Pickup Area Pincode <span className="text-red-500">*</span></label>
                       <input className="w-full border-slate-200 rounded-lg bg-slate-50/50 p-3 focus:ring-shipdesk-blue focus:border-shipdesk-blue" placeholder="Origin Pincode" type="text" />
@@ -48,29 +48,31 @@ export default function MyOrders() {
                 {/* BEGIN: WeightDimensions */}
                 <section data-purpose="weight-dimensions-section">
                   <h2 className="text-lg font-bold text-slate-800 mb-6">Weight &amp; Dimensions(In cm)</h2>
-                  <div className="bg-slate-800 rounded-2xl overflow-hidden shadow-lg shadow-slate-200/50">
-                    <div className="grid grid-cols-5 text-[11px] font-bold text-slate-400 uppercase tracking-wider px-6 py-4 bg-slate-900/40">
-                      <div className="col-span-1">Weight (in Kg)</div>
-                      <div className="text-center">Qty</div>
-                      <div className="text-center">Length</div>
-                      <div className="text-center">Width</div>
-                      <div className="text-center">Height</div>
-                    </div>
-                    <div className="grid grid-cols-5 gap-3 p-6 pt-2">
-                      <div className="col-span-1">
-                        <input className="w-full bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 focus:ring-blue-500" placeholder="Enter Total Weight" type="text" />
+                  <div className="overflow-x-auto pb-4 custom-scrollbar">
+                    <div className="bg-slate-800 rounded-2xl overflow-hidden shadow-lg shadow-slate-200/50 min-w-[600px]">
+                      <div className="grid grid-cols-5 text-[11px] font-bold text-slate-400 uppercase tracking-wider px-6 py-4 bg-slate-900/40">
+                        <div className="col-span-1">Weight (in Kg)</div>
+                        <div className="text-center">Qty</div>
+                        <div className="text-center">Length</div>
+                        <div className="text-center">Width</div>
+                        <div className="text-center">Height</div>
                       </div>
-                      <div className="text-center">
-                        <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Qty" type="text" />
-                      </div>
-                      <div className="text-center">
-                        <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Length" type="text" />
-                      </div>
-                      <div className="text-center">
-                        <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Width" type="text" />
-                      </div>
-                      <div className="text-center">
-                        <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Height" type="text" />
+                      <div className="grid grid-cols-5 gap-3 p-6 pt-2">
+                        <div className="col-span-1">
+                          <input className="w-full bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 focus:ring-blue-500" placeholder="Enter Total Weight" type="text" />
+                        </div>
+                        <div className="text-center">
+                          <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Qty" type="text" />
+                        </div>
+                        <div className="text-center">
+                          <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Length" type="text" />
+                        </div>
+                        <div className="text-center">
+                          <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Width" type="text" />
+                        </div>
+                        <div className="text-center">
+                          <input className="w-3/4 mx-auto bg-slate-700/50 border-slate-600 rounded-lg text-white placeholder-slate-500 text-sm py-2.5 text-center focus:ring-blue-500" placeholder="Height" type="text" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -79,7 +81,7 @@ export default function MyOrders() {
                 {/* BEGIN: ModeInvoiceDetails */}
                 <section data-purpose="mode-invoice-section">
                   <h2 className="text-lg font-bold text-slate-800 mb-6 border-t pt-8 border-slate-100">Mode &amp; Invoice Details</h2>
-                  <div className="grid grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Payment Mode <span className="text-red-500">*</span></label>
                       <select className="w-full border-slate-200 rounded-lg bg-slate-50/50 p-3 focus:ring-shipdesk-blue focus:border-shipdesk-blue">

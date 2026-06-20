@@ -223,7 +223,7 @@ export default function PickupRequest() {
                         </div>
                         {/* Modal Content */}
                         <div className="p-8 space-y-6">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-widest block">Shipping Partner</label>
                                     <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none text-slate-700">
@@ -250,7 +250,7 @@ export default function PickupRequest() {
                                 </div>
                                 <p className="text-xs text-blue-600 font-medium px-1 flex items-center gap-1 mt-2"><span className="material-symbols-outlined text-[16px]">info</span> Full address will be shared with the courier partner automatically.</p>
                             </div>
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-widest block">Pickup Date</label>
                                     <div className="relative">
