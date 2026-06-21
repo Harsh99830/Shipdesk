@@ -5,14 +5,14 @@ import Topbar from '../components/Topbar';
 
 export default function MyOrders() {
   return (
-    <div className="h-screen overflow-hidden bg-shipdesk-surface font-sans">
+    <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
       <Sidebar />
 
-      <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] h-full">
+      <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">
         <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
         {/* BEGIN: MainContent */}
-        <main className="flex-1 overflow-y-auto p-4 lg:p-8 custom-scrollbar mt-16 lg:mt-0">
+        <main className="flex-1 overflow-y-auto mt-16 p-4 sm:p-gutter custom-scrollbar">
           {/* BEGIN: StepIndicator */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 text-sm">
             <div className="flex flex-wrap items-center gap-2">

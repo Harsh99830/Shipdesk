@@ -16,13 +16,16 @@ export default function PickupRequest() {
     }, []);
 
     return (
-        <div className="bg-background font-body-md text-on-surface min-h-screen">
+        <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
             <Sidebar />
-            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
-            {/* Main Content Area */}
-            <main className="ml-0 lg:ml-[260px] mt-16 p-4 lg:p-8 max-w-7xl mx-auto min-h-screen">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">
+                <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
+
+                {/* Main Content */}
+                <main className="flex-1 overflow-y-auto p-4 sm:p-gutter mt-16 custom-scrollbar">
+                    <div className="max-w-container-max mx-auto space-y-gutter">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
                         <h2 className="font-headline-lg text-headline-lg text-on-surface">Pickup Request</h2>
                         <p className="text-on-surface-variant text-sm mt-1">Schedule and manage your courier pickups across warehouses.</p>
@@ -201,7 +204,9 @@ export default function PickupRequest() {
                         </div>
                     </div>
                 </section>
-            </main>
+                    </div>
+                </main>
+            </div>
 
             {/* Modal Overlay */}
             {isModalOpen && (

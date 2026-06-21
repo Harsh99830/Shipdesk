@@ -12,7 +12,7 @@ export default function RateCalculatorDomestic() {
     };
 
     return (
-        <div className="min-h-screen bg-background text-on-background flex flex-col">
+        <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
             <Sidebar />
 
             <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">
@@ -20,7 +20,7 @@ export default function RateCalculatorDomestic() {
 
                 {/* Main Content Area */}
                 <main className="flex-1 overflow-y-auto mt-16 p-4 sm:p-gutter custom-scrollbar">
-                    <div className="max-w-container-max mx-auto">
+                    <div className="max-w-container-max mx-auto space-y-gutter">
                         <header className="mb-stack-lg">
                             <h2 className="font-headline-lg text-headline-lg text-primary">Shipping Rate Calculator</h2>
                             <div className="h-1 w-24 bg-secondary mt-2 rounded-full"></div>

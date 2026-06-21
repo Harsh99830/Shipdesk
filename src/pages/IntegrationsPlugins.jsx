@@ -19,7 +19,7 @@ export default function IntegrationsPlugins() {
     };
 
     return (
-        <div className="min-h-screen bg-background text-on-surface flex flex-col">
+        <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
             <Sidebar />
 
             <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">

@@ -6,18 +6,20 @@ export default function NdrExceptions() {
     const [activeTab, setActiveTab] = useState('open');
 
     return (
-        <div className="bg-slate-50 text-slate-800 min-h-screen font-body-md">
+        <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
             <Sidebar />
-            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
-            {/* Main Content Canvas */}
-            <main className="ml-0 lg:ml-[260px] mt-16 min-h-screen">
-                <div className="p-4 lg:p-8 max-w-7xl mx-auto">
+            <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">
+                <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
+
+                {/* Main Content */}
+                <main className="flex-1 overflow-y-auto p-4 sm:p-gutter mt-16 custom-scrollbar">
+                    <div className="max-w-container-max mx-auto space-y-gutter">
                     
                     {/* Page Header */}
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
                         <div>
-                            <h2 className="font-headline-lg text-3xl font-bold text-slate-900 tracking-tight">NDR & Exceptions</h2>
+                            <h2 className="font-headline-lg text-headline-lg text-primary">NDR & Exceptions</h2>
                             <p className="text-slate-500 text-sm mt-1">Manage and resolve non-delivery reports to optimize fulfillment rates.</p>
                         </div>
                         <div className="flex items-center gap-2 p-1.5 bg-slate-200/50 rounded-xl">
@@ -194,8 +196,9 @@ export default function NdrExceptions() {
                             </div>
                         </div>
                     </footer>
-                </div>
-            </main>
+                    </div>
+                </main>
+            </div>
         </div>
     );
 }

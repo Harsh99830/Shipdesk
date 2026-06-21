@@ -41,18 +41,20 @@ export default function WeightReconciliation() {
     ];
 
     return (
-        <div className="bg-slate-50 text-slate-800 min-h-screen font-body-md">
+        <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
             <Sidebar />
-            <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
-            {/* Main Content Shell */}
-            <main className="ml-0 lg:ml-[260px] mt-16 min-h-screen">
-                <div className="p-4 lg:p-8 space-y-6 max-w-7xl mx-auto">
+            <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">
+                <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
+
+                {/* Main Content */}
+                <main className="flex-1 overflow-y-auto p-4 sm:p-gutter mt-16 custom-scrollbar">
+                    <div className="max-w-container-max mx-auto space-y-gutter">
                     
                     {/* Header Section */}
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
                         <div>
-                            <h2 className="font-headline-lg text-3xl font-bold text-slate-900 tracking-tight">Weight Reconciliation</h2>
+                            <h2 className="font-headline-lg text-headline-lg text-primary">Weight Reconciliation</h2>
                             <p className="text-sm font-medium text-slate-500 mt-1">Review and dispute discrepancies in weight and dimensions.</p>
                         </div>
                         <button className="flex items-center justify-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-800 transition-all active:scale-95 shadow-md self-start md:self-auto w-full md:w-auto">
@@ -283,8 +285,9 @@ export default function WeightReconciliation() {
                             Copyright &copy; 2026 LogiReconcile Pvt. Ltd. | Made with <span className="text-red-500 material-symbols-outlined text-[14px] align-middle" style={{fontVariationSettings: "'FILL' 1"}}>favorite</span> for Logistics
                         </p>
                     </footer>
-                </div>
-            </main>
+                    </div>
+                </main>
+            </div>
         </div>
     );
 }

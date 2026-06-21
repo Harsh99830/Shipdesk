@@ -4,15 +4,15 @@ import Topbar from '../components/Topbar';
 
 export default function FinanceCodRemittance() {
     return (
-        <div className="h-screen overflow-hidden bg-slate-50 font-sans flex flex-col">
+        <div className="min-h-screen bg-background font-body-md text-on-surface flex flex-col">
             <Sidebar />
 
-            <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] h-full">
+            <div className="flex flex-col min-w-0 ml-0 lg:ml-[260px] flex-1">
                 <Topbar className="fixed top-0 left-0 lg:left-[260px] right-0 z-40" />
 
                 {/* Main Content */}
-                <main className="flex-1 overflow-y-auto mt-16 p-4 lg:p-8 custom-scrollbar">
-                    <div className="max-w-7xl mx-auto space-y-6">
+                <main className="flex-1 overflow-y-auto mt-16 p-4 sm:p-gutter custom-scrollbar">
+                    <div className="max-w-container-max mx-auto space-y-gutter">
                         {/* Header */}
                         <div>
                             <h2 className="text-2xl font-black text-slate-900">COD Remittance</h2>
