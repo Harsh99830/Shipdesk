@@ -123,45 +123,23 @@ export default function NdrExceptions() {
                             </div>
                         </div>
 
-                        {/* Data Table */}
-                        <div className="overflow-x-auto">
-                            <table className="w-full text-left border-collapse">
-                                <thead>
-                                    <tr className="bg-slate-50 border-b border-slate-200">
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Date</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Tracking No</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Last Update</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Reason</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center">Attempts</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Mode</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-slate-100">
-                                    {/* Empty State */}
-                                    <tr className="group hover:bg-slate-50/50 transition-colors">
-                                        <td className="py-24" colSpan="7">
-                                            <div className="flex flex-col items-center justify-center text-center px-6">
-                                                <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mb-6 border border-slate-200">
-                                                    <span className="material-symbols-outlined text-[40px] text-slate-400">content_paste_off</span>
-                                                </div>
-                                                <h4 className="text-xl font-bold text-slate-800">No NDR records found</h4>
-                                                <p className="text-sm text-slate-500 mt-2 max-w-sm mx-auto">
-                                                    There are currently no active non-delivery reports for your account. You're all caught up!
-                                                </p>
-                                                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
-                                                    <button className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold shadow-md shadow-blue-600/20 hover:bg-blue-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                                                        Check Past Records
-                                                    </button>
-                                                    <button className="w-full sm:w-auto px-6 py-2.5 border border-slate-300 bg-white text-slate-700 rounded-xl text-sm font-bold hover:bg-slate-50 transition-all shadow-sm">
-                                                        Request Support
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        {/* Empty State */}
+                        <div className="py-20 flex flex-col items-center justify-center text-center px-6">
+                            <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mb-6 border border-slate-200">
+                                <span className="material-symbols-outlined text-[40px] text-slate-400">content_paste_off</span>
+                            </div>
+                            <h4 className="text-xl font-bold text-slate-800">No NDR records found</h4>
+                            <p className="text-sm text-slate-500 mt-2 max-w-sm mx-auto">
+                                There are currently no active non-delivery reports for your account. You're all caught up!
+                            </p>
+                            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+                                <button className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold shadow-md shadow-blue-600/20 hover:bg-blue-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                                    Check Past Records
+                                </button>
+                                <button className="w-full sm:w-auto px-6 py-2.5 border border-slate-300 bg-white text-slate-700 rounded-xl text-sm font-bold hover:bg-slate-50 transition-all shadow-sm">
+                                    Request Support
+                                </button>
+                            </div>
                         </div>
 
                         {/* Footer / Pagination */}
