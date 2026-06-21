@@ -71,7 +71,7 @@ export default function CustomerSupport() {
 
                         {/* Data Table Card */}
                         <div className="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
-                            <div className="overflow-x-auto">
+                            <div className="overflow-x-auto hidden sm:block">
                                 <table className="w-full text-left border-collapse min-w-[700px]">
                                     <thead className="bg-surface-container-low">
                                         <tr>
@@ -99,6 +99,19 @@ export default function CustomerSupport() {
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+
+                            {/* Mobile View Empty State */}
+                            <div className="block sm:hidden py-16 px-4">
+                                <div className="flex flex-col items-center justify-center text-center space-y-4">
+                                    <div className="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center text-on-surface-variant/30 mx-auto">
+                                        <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 0" }}>confirmation_number</span>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-headline-md text-headline-md text-on-surface">No tickets found</h3>
+                                        <p className="text-on-surface-variant text-sm mt-1">You haven't raised any {activeTab} support tickets yet. Click 'New Request' to start.</p>
+                                    </div>
+                                </div>
                             </div>
                             {/* Table Footer / Pagination */}
                             <div className="px-6 py-4 bg-white border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
