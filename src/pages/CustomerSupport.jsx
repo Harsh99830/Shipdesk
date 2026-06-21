@@ -19,16 +19,16 @@ export default function CustomerSupport() {
                         {/* Header Actions */}
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                             <h1 className="font-headline-lg text-headline-lg text-on-surface">Support Ticket</h1>
-                            <div className="flex flex-wrap gap-3">
-                                <button className="flex items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-5 py-2.5 rounded-lg transition-all active:scale-95 text-sm font-medium">
+                            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                                <button className="flex items-center justify-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-5 py-2.5 rounded-lg transition-all active:scale-95 text-sm font-medium w-full sm:w-auto">
                                     <span className="material-symbols-outlined text-[20px]">add_circle</span>
                                     <span>Disputes Request</span>
                                 </button>
-                                <button className="flex items-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-white px-5 py-2.5 rounded-lg transition-all active:scale-95 text-sm font-medium">
+                                <button className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-white px-5 py-2.5 rounded-lg transition-all active:scale-95 text-sm font-medium w-full sm:w-auto">
                                     <span className="material-symbols-outlined text-[20px]">description</span>
                                     <span>POD Request</span>
                                 </button>
-                                <button className="flex items-center gap-2 bg-primary-container hover:bg-black text-white px-5 py-2.5 rounded-lg transition-all active:scale-95 text-sm font-medium">
+                                <button className="flex items-center justify-center gap-2 bg-primary-container hover:bg-black text-white px-5 py-2.5 rounded-lg transition-all active:scale-95 text-sm font-medium w-full sm:w-auto">
                                     <span className="material-symbols-outlined text-[20px]">mail</span>
                                     <span>New Request</span>
                                 </button>
@@ -36,10 +36,10 @@ export default function CustomerSupport() {
                         </div>
 
                         {/* Tabbed Navigation */}
-                        <div className="flex gap-2">
+                        <div className="grid grid-cols-3 sm:flex gap-2 w-full sm:w-auto">
                             <button 
                                 onClick={() => setActiveTab('open')}
-                                className={`px-8 py-2.5 rounded-lg font-medium border transition-all text-sm ${
+                                className={`px-4 sm:px-8 py-2.5 rounded-lg font-medium border transition-all text-sm text-center ${
                                     activeTab === 'open'
                                         ? 'bg-secondary-container text-on-secondary-container border-secondary-container/20 shadow-sm'
                                         : 'bg-white text-on-surface-variant border-outline-variant hover:text-on-surface hover:border-outline'
@@ -49,7 +49,7 @@ export default function CustomerSupport() {
                             </button>
                             <button 
                                 onClick={() => setActiveTab('pending')}
-                                className={`px-8 py-2.5 rounded-lg font-medium border transition-all text-sm ${
+                                className={`px-4 sm:px-8 py-2.5 rounded-lg font-medium border transition-all text-sm text-center ${
                                     activeTab === 'pending'
                                         ? 'bg-secondary-container text-on-secondary-container border-secondary-container/20 shadow-sm'
                                         : 'bg-white text-on-surface-variant border-outline-variant hover:text-on-surface hover:border-outline'
@@ -59,7 +59,7 @@ export default function CustomerSupport() {
                             </button>
                             <button 
                                 onClick={() => setActiveTab('closed')}
-                                className={`px-8 py-2.5 rounded-lg font-medium border transition-all text-sm ${
+                                className={`px-4 sm:px-8 py-2.5 rounded-lg font-medium border transition-all text-sm text-center ${
                                     activeTab === 'closed'
                                         ? 'bg-secondary-container text-on-secondary-container border-secondary-container/20 shadow-sm'
                                         : 'bg-white text-on-surface-variant border-outline-variant hover:text-on-surface hover:border-outline'
@@ -72,7 +72,7 @@ export default function CustomerSupport() {
                         {/* Data Table Card */}
                         <div className="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
                             <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse">
+                                <table className="w-full text-left border-collapse min-w-[700px]">
                                     <thead className="bg-surface-container-low">
                                         <tr>
                                             <th className="px-6 py-4 font-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Date</th>

@@ -133,15 +133,15 @@ export default function RateCalculatorDomestic() {
                                         </div>
 
                                         {/* Buttons */}
-                                        <div className="flex gap-4 pt-4">
-                                            <button type="submit" className="flex-1 bg-on-tertiary-container hover:bg-on-tertiary-container/90 text-white font-headline-md py-4 rounded-xl transition-all shadow-lg shadow-on-tertiary-container/20 flex items-center justify-center gap-2">
+                                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                                            <button type="submit" className="flex-1 bg-on-tertiary-container hover:bg-on-tertiary-container/90 text-white font-headline-md py-4 rounded-xl transition-all shadow-lg shadow-on-tertiary-container/20 flex items-center justify-center gap-2 w-full sm:w-auto">
                                                 {calculating ? (
                                                     <><span className="inline-block animate-spin mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span> Calculating...</>
                                                 ) : (
                                                     'Calculate'
                                                 )}
                                             </button>
-                                            <button type="reset" className="flex-1 bg-white border border-outline-variant hover:bg-surface-container-high text-on-surface font-headline-md py-4 rounded-xl transition-all">
+                                            <button type="reset" className="flex-1 bg-white border border-outline-variant hover:bg-surface-container-high text-on-surface font-headline-md py-4 rounded-xl transition-all w-full sm:w-auto">
                                                 Reset
                                             </button>
                                         </div>
@@ -151,7 +151,7 @@ export default function RateCalculatorDomestic() {
 
                             {/* Partners Column */}
                             <div className="col-span-12 lg:col-span-5 h-fit lg:h-full">
-                                <div className="bg-gradient-to-br from-secondary-container to-primary-container rounded-3xl p-6 sm:p-8 h-full flex flex-col relative overflow-hidden group text-white">
+                                <div className="bg-gradient-to-br from-secondary-container to-primary-container rounded-3xl p-6 sm:p-8 min-h-[400px] h-full flex flex-col relative overflow-hidden group text-white">
                                     {/* Map Layer */}
                                     <div className="absolute inset-0 opacity-20 pointer-events-none p-12">
                                         <div className="w-full h-full bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Map_of_India.svg')] bg-contain bg-center bg-no-repeat invert brightness-0"></div>
